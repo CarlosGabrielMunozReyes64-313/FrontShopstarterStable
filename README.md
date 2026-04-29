@@ -1,21 +1,21 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta plantilla proporciona una configuración mínima para hacer funcionar React con Vite, incluyendo HMR (Hot Module Replacement) y algunas reglas de ESLint.
 
-Currently, two official plugins are available:
+Actualmente hay dos plugins oficiales disponibles:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) usa [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) usa [SWC](https://swc.rs/)
 
-## React Compiler
+## Compilador de React
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+El Compilador de React está habilitado en esta plantilla. Consulta [esta documentación](https://react.dev/learn/react-compiler) para más información.
 
-Note: This will impact Vite dev & build performances.
+Nota: Esto puede afectar el rendimiento del servidor de desarrollo y la compilación de Vite.
 
-## Expanding the ESLint configuration
+## Ampliar la configuración de ESLint
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Si estás desarrollando una aplicación para producción, recomendamos actualizar la configuración para habilitar reglas de lint con verificación de tipos:
 
 ```js
 export default defineConfig([
@@ -23,29 +23,29 @@ export default defineConfig([
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
-      // Other configs...
+      // Otras configuraciones...
 
-      // Remove tseslint.configs.recommended and replace with this
+      // Elimina tseslint.configs.recommended y reemplázalo con esto
       tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
+      // También puedes usar esto para reglas más estrictas
       tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
+      // Opcionalmente, agrega esto para reglas de estilo
       tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
+      // Otras configuraciones...
     ],
     languageOptions: {
       parserOptions: {
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
         tsconfigRootDir: import.meta.dirname,
       },
-      // other options...
+      // otras opciones...
     },
   },
 ])
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+También puedes instalar [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) y [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) para reglas de lint específicas de React:
 
 ```js
 // eslint.config.js
@@ -57,10 +57,10 @@ export default defineConfig([
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
-      // Other configs...
-      // Enable lint rules for React
+      // Otras configuraciones...
+      // Habilitar reglas de lint para React
       reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
+      // Habilitar reglas de lint para React DOM
       reactDom.configs.recommended,
     ],
     languageOptions: {
@@ -68,14 +68,15 @@ export default defineConfig([
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
         tsconfigRootDir: import.meta.dirname,
       },
-      // other options...
+      // otras opciones...
     },
   },
 ])
 ```
 
-## estructura del proyecto:
+## Estructura del proyecto
 
+```
 FrontShopstarterStable/
 │
 ├── public/
@@ -188,5 +189,5 @@ FrontShopstarterStable/
 ├── package.json
 ├── tsconfig.json
 ├── vite.config.ts
-└── .env         
-```                 # Variables de entorno (API keys del mapa)
+└── .env                               # Variables de entorno (API keys del mapa)
+```
