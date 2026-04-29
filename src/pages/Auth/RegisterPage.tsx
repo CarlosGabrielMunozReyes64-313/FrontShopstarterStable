@@ -12,7 +12,7 @@ interface FormData {
   email: string;
 }
 
-interface FormErrors Partial<FormData> {}
+interface FormErrors extends Partial<FormData> {}
 
 const PASSWORD_RULES = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{8,}$/;
 
