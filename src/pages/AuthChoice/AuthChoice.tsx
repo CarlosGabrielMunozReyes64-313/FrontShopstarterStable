@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import styles from './Authchoice.css';
+import styles from './Authchoice.module.css';
 
 import imgLogin    from '../../assets/images/paisaje-niebla-matutina-montanas-globos-aerostaticos-al-amanecer_335224-794.png';
 import imgRegister from '../../assets/images/Sabes-que-te-dice-ese-paisaje.jpg';
