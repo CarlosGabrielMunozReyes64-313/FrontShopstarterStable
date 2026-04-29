@@ -177,7 +177,7 @@ FrontShopstarterStable/
 │   │   └── validators.ts              # Validaciones de formularios
 │   │
 │   ├── styles/                        # Estilos globales y variables
-│   │   ├── variables.css              # Colores, fuentes (tema ML: amarillo #FFE600)
+│   │   ├── variables.css              # Colores, fuentes (tema ML: Azul #0073ff)
 │   │   ├── global.css
 │   │   └── mixins.css
 │   │
