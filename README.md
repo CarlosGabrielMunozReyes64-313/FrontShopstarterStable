@@ -73,3 +73,120 @@ export default defineConfig([
   },
 ])
 ```
+
+## estructura del proyecto:
+
+FrontShopstarterStable/
+│
+├── public/
+│   └── favicon.ico
+│
+├── src/
+│   │
+│   ├── assets/                        # Imágenes, íconos, fuentes estáticas
+│   │   ├── images/
+│   │   └── icons/
+│   │
+│   ├── components/                    # Componentes reutilizables (UI puro)
+│   │   ├── common/
+│   │   │   ├── Navbar/
+│   │   │   │   ├── Navbar.tsx
+│   │   │   │   └── Navbar.module.css
+│   │   │   ├── Footer/
+│   │   │   │   ├── Footer.tsx
+│   │   │   │   └── Footer.module.css
+│   │   │   ├── Button/
+│   │   │   │   └── Button.tsx
+│   │   │   ├── Input/
+│   │   │   │   └── Input.tsx
+│   │   │   ├── Modal/
+│   │   │   │   └── Modal.tsx
+│   │   │   ├── Spinner/
+│   │   │   │   └── Spinner.tsx
+│   │   │   └── ProductCard/           # Tarjeta de producto estilo ML
+│   │   │       ├── ProductCard.tsx
+│   │   │       └── ProductCard.module.css
+│   │   │
+│   │   ├── map/                       # Componentes del mapa
+│   │   │   ├── MapView.tsx            # Componente principal del mapa
+│   │   │   ├── VendorMarker.tsx       # Marcador de vendedor en el mapa
+│   │   │   └── MapControls.tsx        # Controles de zoom/ubicación
+│   │   │
+│   │   └── vendor/                    # Componentes de vendedores
+│   │       ├── VendorCard.tsx         # Tarjeta de perfil del vendedor
+│   │       ├── VendorList.tsx         # Lista de vendedores cercanos
+│   │       └── VendorDetail.tsx       # Detalle de un vendedor
+│   │
+│   ├── pages/                         # Páginas / vistas de la app
+│   │   ├── Home/
+│   │   │   ├── HomePage.tsx           # Landing + búsqueda principal (estilo ML)
+│   │   │   └── HomePage.module.css
+│   │   ├── Auth/
+│   │   │   ├── LoginPage.tsx
+│   │   │   ├── RegisterPage.tsx
+│   │   │   └── Auth.module.css
+│   │   ├── Map/
+│   │   │   ├── MapPage.tsx            # Vista del mapa con vendedores
+│   │   │   └── MapPage.module.css
+│   │   ├── Products/
+│   │   │   ├── ProductsPage.tsx       # Listado de productos (estilo ML)
+│   │   │   ├── ProductDetailPage.tsx  # Detalle de producto
+│   │   │   └── Products.module.css
+│   │   ├── Orders/
+│   │   │   ├── OrdersPage.tsx         # Historial de pedidos
+│   │   │   ├── OrderDetailPage.tsx
+│   │   │   └── Orders.module.css
+│   │   ├── Cart/
+│   │   │   ├── CartPage.tsx           # Carrito de compras
+│   │   │   └── Cart.module.css
+│   │   └── Profile/
+│   │       ├── ProfilePage.tsx        # Perfil del usuario
+│   │       └── Profile.module.css
+│   │
+│   ├── router/
+│   │   └── AppRouter.tsx              # Definición de rutas (React Router)
+│   │
+│   ├── context/                       # Estado global con Context API
+│   │   ├── AuthContext.tsx            # Sesión del usuario
+│   │   ├── CartContext.tsx            # Estado del carrito
+│   │   └── LocationContext.tsx        # Geolocalización del usuario
+│   │
+│   ├── hooks/                         # Custom Hooks
+│   │   ├── useAuth.ts                 # Lógica de autenticación
+│   │   ├── useGeolocation.ts          # Hook para obtener coordenadas
+│   │   ├── useVendors.ts              # Fetch de vendedores cercanos
+│   │   └── useCart.ts                 # Lógica del carrito
+│   │
+│   ├── services/                      # Comunicación con el backend/API
+│   │   ├── api.ts                     # Instancia base de axios/fetch
+│   │   ├── authService.ts             # Login, register, logout
+│   │   ├── vendorService.ts           # Endpoints de vendedores
+│   │   ├── productService.ts          # Endpoints de productos
+│   │   └── orderService.ts            # Endpoints de pedidos
+│   │
+│   ├── types/                         # Tipos e interfaces TypeScript
+│   │   ├── auth.types.ts
+│   │   ├── vendor.types.ts
+│   │   ├── product.types.ts
+│   │   └── order.types.ts
+│   │
+│   ├── utils/                         # Funciones auxiliares
+│   │   ├── formatCurrency.ts          # Formatear precios estilo ML
+│   │   ├── calculateDistance.ts       # Distancia entre coordenadas
+│   │   └── validators.ts              # Validaciones de formularios
+│   │
+│   ├── styles/                        # Estilos globales y variables
+│   │   ├── variables.css              # Colores, fuentes (tema ML: amarillo #FFE600)
+│   │   ├── global.css
+│   │   └── mixins.css
+│   │
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── vite-env.d.ts
+│
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── .env         
+```                 # Variables de entorno (API keys del mapa)
