@@ -1,5 +1,6 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
 import styles from './Auth.module.css';
+import type { RegisterForm } from '../../types/auth.types';
 
 interface FormData {
   username: string;

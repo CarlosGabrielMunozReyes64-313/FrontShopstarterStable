@@ -1,5 +1,6 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
 import styles from './Auth.module.css';
+import type { LoginForm }    from '../../types/auth.types';
 
 interface FormData {
   email: string;
